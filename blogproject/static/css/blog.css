@@ -1,0 +1,53 @@
+.content{
+  width:60%;
+  float:left;
+  padding-left: 30px;
+  background: pink;
+  height: 100%;
+}
+.sidebar{
+  width:40%;
+  float:right;
+  padding: 10px;
+  background: purple;
+  height: 100%;
+}
+h1{
+  text-align: center;
+  border-bottom: 1px solid purple;
+  padding-bottom: 10px;
+  color: purple;
+}
+h2{
+    text-align: center;
+    border-bottom: 1px solid pink;
+    padding-bottom: 10px;
+}
+h3{
+    border-bottom: 1px solid purple;
+    font-style: italic;
+}
+#date{
+  color:purple;
+  font-size: 12px;
+  font-style: italic;
+}
+body{
+  background: pink;
+}
+a{
+  color: purple;
+}
+.a1{
+  color: pink;
+}
+#ch{
+  color: purple;
+  font-size: 30px;
+  font-style: italic;
+  border-bottom: 2px solid green;
+}
+.sidebar{
+  color: pink;
+  padding-top: 1%;
+}

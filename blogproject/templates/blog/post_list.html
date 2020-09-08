@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'blog/base.html'%}
+  {% block title_block%}Aanchal's Blog Home Page  {% endblock %}
+  {%block content%}
+  <h1>AANCHAL'S BLOG</h1>
+  {% if tag %}
+  <h2>Posts tagged With '{{tag.name}}'</h2>
+  {% endif %}
+  {% for post in post_list %}
+  <a href="{{post.get_absolute_url}}"><h3>{{post.title}}</h3></a>
+<p id="date">Published On {{post.publish}} by {{post.author|title}}</p>
+<p>Tags:
+  {% for tag in post.tags.all %}
+  <a href="{%url 'post_list_by_tag_name' tag.slug%}"><button style="height:30px;width:100px;background-color:#a903fc;color:pink">{{tag.name}}</button></a>
+  {%endfor%}
+</p>
+{{post.body|truncatewords:30|linebreaks}}
+  {%endfor%}
+  {% include 'blog/pagination.html' with page=post_list%}
+  {% endblock %}
